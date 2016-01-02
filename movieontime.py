@@ -9,7 +9,7 @@ url_encoded_query = query.replace(" ","+")
 
 response = requests.get(URL + url_encoded_query)
 
-soup = BS(response.text)
+soup = BS(response.text,"lxml")
 #print soup
 
 results_list = soup.find('table', class_="result")
